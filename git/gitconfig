@@ -1,0 +1,5 @@
+[user]
+	name = Patrick Koenig
+	email = pkoenig10@gmail.com
+[core]
+	editor = vim

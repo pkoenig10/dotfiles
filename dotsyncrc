@@ -1,0 +1,11 @@
+[files]
+dotsyncrc
+git/gitconfig
+ssh/ssh
+vim/vim
+vim/vimrc
+[endfiles]
+
+[hosts]
+localhost
+[endhosts]

@@ -2,5 +2,6 @@
 *.swp
 .DS_Store
 
+ssh/ssh/authorized_keys
 ssh/ssh/id*
 ssh/ssh/known_hosts

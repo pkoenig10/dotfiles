@@ -1,3 +1,7 @@
 Host machine
     HostName themachine.ml
     User pkoenig10
+
+Host pi
+    HostName raspberrypi
+    User pi

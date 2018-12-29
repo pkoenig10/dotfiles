@@ -1,5 +1,5 @@
 Host machine
-    HostName themachine.ml
+    HostName themachine.app
     User pkoenig10
 
 Host pi

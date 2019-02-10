@@ -1,5 +1,6 @@
 Host machine
     HostName themachine.app
+    Port 5492
     User pkoenig10
 
 Host pi

@@ -4,5 +4,5 @@ Host machine
     User pkoenig10
 
 Host pi
-    HostName raspberrypi
+    HostName raspberrypi.local
     User pi

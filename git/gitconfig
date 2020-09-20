@@ -9,3 +9,5 @@
 	rebase = true
 [push]
 	default = upstream
+[rebase]
+	autoStash = true

@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-HOSTNAME="localhost"
-
-source $(dirname $0)/../dotsync/bin/dotsync

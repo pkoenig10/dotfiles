@@ -1,9 +1,4 @@
-*~
-*.swp
-.DS_Store
-
-/ssh/ssh/authorized_keys
-/ssh/ssh/id*
-/ssh/ssh/known_hosts
-
-/vim/vim/.netrwhist
+/ssh/authorized_keys
+/ssh/id_rsa
+/ssh/id_rsa.pub
+/ssh/known_hosts

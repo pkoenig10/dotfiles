@@ -1,11 +1,17 @@
-[user]
-	name = Patrick Koenig
-	email = pkoenig10@gmail.com
+[commit]
+	gpgsign = true
 [core]
 	editor = vim
+[gpg]
+	format = ssh
 [pull]
 	rebase = true
 [push]
+	autoSetupRemote = true
 	default = upstream
 [rebase]
 	autoStash = true
+[user]
+	name = Patrick Koenig
+	email = pkoenig10@gmail.com
+	signingKey = ~/.ssh/id_rsa.pub

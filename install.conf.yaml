@@ -4,8 +4,8 @@
       relink: true
 
 - link:
-    ~/.gitconfig:
-    ~/.ssh:
-    ~/.vim:
-    ~/.vimrc:
-    ~/.zshrc:
+    ~/.gitconfig: gitconfig
+    ~/.ssh/config: ssh/config
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc

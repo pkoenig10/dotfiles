@@ -10,15 +10,14 @@ function fish_prompt
     set -l operation
     set -l cwd
 
-    if set -l info (command git rev-parse --git-dir --is-inside-work-tree HEAD 2>/dev/null)
+    if set -l info (command git rev-parse --git-dir --is-inside-work-tree 2>/dev/null)
         set -l git_dir $info[1]
-        set -l inside_work_tree $info[2]
-        set -l sha $info[3]
+        set -l is_inside_work_tree $info[2]
 
         set -l worktree
 
-        if test $inside_work_tree = true
-            set worktree (command git rev-parse --show-toplevel)
+        if test $is_inside_work_tree = true
+            set worktree (command git rev-parse --show-toplevel 2>/dev/null)
         else
             set worktree (string split ' ' -f1 -- (command git worktree list 2>/dev/null)[1])
         end
@@ -48,7 +47,7 @@ function fish_prompt
         if test -z "$ref"
             set ref (command git symbolic-ref HEAD 2>/dev/null)
             or set ref (command git describe --tags --exact-match HEAD 2>/dev/null)
-            or set ref (string sub -l 8 -- $sha)
+            or set ref (command git rev-parse --short=8 HEAD 2>/dev/null)
         end
 
         set ref (string replace -r '^refs/heads/' '' -- $ref)

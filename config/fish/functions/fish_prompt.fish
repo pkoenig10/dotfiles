@@ -1,14 +1,20 @@
 function fish_prompt
     set -l color_normal (set_color normal)
+    set -l color_host (set_color green)
     set -l color_name (set_color blue)
     set -l color_ref (set_color cyan)
     set -l color_operation (set_color magenta)
     set -l color_cwd (set_color yellow)
 
+    set -l host
     set -l name
     set -l ref
     set -l operation
     set -l cwd
+
+    if set -q SSH_TTY
+        set host (prompt_hostname)
+    end
 
     if set -l info (command git rev-parse --git-dir --is-inside-work-tree 2>/dev/null)
         set -l git_dir $info[1]
@@ -55,5 +61,5 @@ function fish_prompt
         set name (prompt_pwd -d 0)
     end
 
-    echo -n -s $color_name $name $color_normal $color_ref ' '$ref $color_normal $color_operation ' '$operation $color_normal $color_cwd ' '$cwd $color_normal "\$ "
+    echo -n -s $color_host $host' ' $color_normal $color_name $name $color_normal $color_ref ' '$ref $color_normal $color_operation ' '$operation $color_normal $color_cwd ' '$cwd $color_normal "\$ "
 end

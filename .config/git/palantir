@@ -1,0 +1,10 @@
+[filter "lfs"]
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+[gpg]
+    format = openpgp
+[user]
+    email = pkoenig@palantir.com
+    signingkey = C97C4333F5FDE62B

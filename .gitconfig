@@ -24,3 +24,6 @@
     name = Patrick Koenig
     email = pkoenig10@gmail.com
     signingKey = ~/.ssh/id_rsa.pub
+
+[includeIf "hasconfig:remote.*.url:git@github.palantir.build:*/*"]
+    path = ~/.config/git/palantir

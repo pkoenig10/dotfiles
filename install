@@ -19,9 +19,12 @@ function brew_install
     cmd brew install -q \
         android-platform-tools \
         bluesnooze \
+        corretto \
         fd \
         fish \
         git \
+        git-lfs \
+        jetbrains-toolbox \
         orbstack \
         rectangle \
         ripgrep \
@@ -50,6 +53,7 @@ end
 
 link .config/fish/config.fish
 link .config/fish/functions
+link .config/git/palantir
 link .gitconfig
 link .ssh/authorized_keys
 link .ssh/config

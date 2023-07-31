@@ -16,16 +16,24 @@ end
 function brew_install
     echo "Installing Homebrew packages"
 
+    cmd brew tap \
+        deployability/slslog git@github.palantir.build:deployability/slslog.git
+
     cmd brew install -q \
         android-platform-tools \
         bluesnooze \
+        corretto@21 \
         fd \
         fish \
         git \
+        git-lfs \
+        jdk-mission-control \
+        jetbrains-toolbox \
         orbstack \
         rectangle \
         ripgrep \
         sd \
+        slslog \
         sourcetree \
         the-unarchiver \
         vim \
@@ -50,6 +58,7 @@ end
 
 link .config/fish/config.fish
 link .config/fish/functions
+link .config/git/palantir
 link .gitconfig
 link .ssh/authorized_keys
 link .ssh/config

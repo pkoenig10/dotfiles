@@ -47,6 +47,7 @@ end
 
 link .config/fish/config.fish
 link .config/fish/functions
+link .config/git/palantir
 link .gitconfig
 link .ssh/config
 link .vim/pack

@@ -2,5 +2,9 @@ version: 2
 updates:
   - package-ecosystem: "gitsubmodule"
     directory: "/"
+    groups:
+      gitsubmodule:
+        patterns:
+          - "*"
     schedule:
       interval: "monthly"

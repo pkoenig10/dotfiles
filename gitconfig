@@ -4,6 +4,8 @@
 	editor = vim
 [gpg]
 	format = ssh
+[help]
+	autocorrect = immediate
 [pull]
 	rebase = true
 [push]

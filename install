@@ -1,15 +1,46 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-set -e
+git submodule update --init --recursive
 
-CONFIG="install.conf.yaml"
-DOTBOT_DIR="dotbot"
+set dir (realpath (status dirname))
 
-DOTBOT_BIN="bin/dotbot"
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+function cmd
+    set -l color_bold (set_color --bold)
+    set -l color_normal (set_color normal)
 
-cd "${BASEDIR}"
-git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
-git submodule update --init --recursive "${DOTBOT_DIR}"
+    echo -s $color_bold "> $argv" $color_normal
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+    $argv
+end
+
+function brew_install
+    echo "Installing Homebrew packages"
+
+    cmd brew install -q \
+        fish \
+        git \
+        ripgrep \
+        vim
+
+    echo
+end
+
+function link -a path
+    echo "Linking ~/$path"
+
+    cmd rm -rf ~/$path
+    cmd ln -s $dir/$path ~/$path
+
+    echo
+end
+
+if command -q brew
+    brew_install
+end
+
+link .config/fish/config.fish
+link .config/fish/functions
+link .gitconfig
+link .ssh/config
+link .vim
+link .vimrc

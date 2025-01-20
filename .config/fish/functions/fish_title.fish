@@ -1,5 +1,10 @@
 function fish_title
+    set -l host
     set -l title
+
+    if set -q SSH_TTY
+        set host (prompt_hostname)
+    end
 
     if set -l info (command git rev-parse --is-inside-work-tree 2>/dev/null)
         set -l inside_work_tree $info[1]
@@ -17,5 +22,5 @@ function fish_title
         set title (prompt_pwd -d 0)
     end
 
-    echo $title
+    echo -n -s $host': ' $title
 end

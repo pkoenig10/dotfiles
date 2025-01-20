@@ -13,7 +13,7 @@ function fish_prompt
     set -l cwd
 
     if set -q SSH_TTY
-        set host (prompt_hostname)
+        set host (hostname)
     end
 
     if set -l info (command git rev-parse --git-dir --is-inside-work-tree 2>/dev/null)

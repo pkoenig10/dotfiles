@@ -41,6 +41,7 @@ end
 link .config/fish/config.fish
 link .config/fish/functions
 link .gitconfig
+link .ssh/authorized_keys
 link .ssh/config
 link .vim
 link .vimrc

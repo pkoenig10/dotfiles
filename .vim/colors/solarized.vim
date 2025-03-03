@@ -1,1 +1,1 @@
-../vim-colors-solarized/colors/solarized.vim
+../../solarized/vim-colors-solarized/colors/solarized.vim

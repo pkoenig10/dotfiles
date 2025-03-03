@@ -1,19 +1,22 @@
 [commit]
-	gpgsign = true
+    gpgsign = true
 [core]
-	editor = vim
+    editor = vim
+[fetch]
+    all = true
+    prune = true
 [gpg]
-	format = ssh
+    format = ssh
 [help]
-	autocorrect = immediate
+    autocorrect = immediate
 [pull]
-	rebase = true
+    rebase = true
 [push]
-	autoSetupRemote = true
-	default = upstream
+    autoSetupRemote = true
+    default = upstream
 [rebase]
-	autoStash = true
+    autoStash = true
 [user]
-	name = Patrick Koenig
-	email = pkoenig10@gmail.com
-	signingKey = ~/.ssh/id_rsa.pub
+    name = Patrick Koenig
+    email = pkoenig10@gmail.com
+    signingKey = ~/.ssh/id_rsa.pub

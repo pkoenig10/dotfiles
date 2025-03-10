@@ -1,8 +1,5 @@
 syntax enable                   " Enable syntax highlighting
 
-set background=dark
-colorscheme solarized           " Use Solarized color scheme
-
 set backspace=indent,eol,start  " Set Backspace behavior
 set ruler                       " Show ruler
 set showmode                    " Show current mode

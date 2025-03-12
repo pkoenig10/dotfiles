@@ -5,10 +5,10 @@ git submodule update --init --recursive
 set dir (realpath (status dirname))
 
 function cmd
-    set -l color_bold (set_color --bold)
+    set -l color_gray (set_color brblack)
     set -l color_normal (set_color normal)
 
-    echo -s $color_bold "> $argv" $color_normal
+    echo -s $color_gray "> $argv" $color_normal
 
     $argv
 end

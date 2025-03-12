@@ -1,7 +1,10 @@
-syntax enable                   " Enable syntax highlighting
+let g:onedark_color_overrides = {
+    \ "background": { "gui": "#282C34", "cterm": "NONE", "cterm16": "NONE" },
+\}
 
-set background=dark
-colorscheme solarized           " Use Solarized color scheme
+colorscheme onedark
+
+syntax enable                   " Enable syntax highlighting
 
 set backspace=indent,eol,start  " Set Backspace behavior
 set ruler                       " Show ruler

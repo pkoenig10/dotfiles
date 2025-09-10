@@ -17,6 +17,7 @@ function brew_install
     echo "Installing Homebrew packages"
 
     cmd brew install -q \
+        fd \
         fish \
         git \
         ripgrep \

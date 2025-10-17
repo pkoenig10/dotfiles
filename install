@@ -17,10 +17,13 @@ function brew_install
     echo "Installing Homebrew packages"
 
     cmd brew install -q \
+        android-platform-tools \
+        bluesnooze \
         fd \
         fish \
         git \
         ripgrep \
+        sd \
         vim
 
     echo

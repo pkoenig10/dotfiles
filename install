@@ -22,9 +22,14 @@ function brew_install
         fd \
         fish \
         git \
+        orbstack \
+        rectangle \
         ripgrep \
         sd \
-        vim
+        sourcetree \
+        the-unarchiver \
+        vim \
+        visual-studio-code
 
     echo
 end

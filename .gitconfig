@@ -16,6 +16,8 @@
     default = upstream
 [rebase]
     autoStash = true
+[tag]
+    gpgsign = true
 [user]
     name = Patrick Koenig
     email = pkoenig10@gmail.com

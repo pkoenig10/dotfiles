@@ -37,6 +37,7 @@ end
 function link -a path
     echo "Linking ~/$path"
 
+    cmd mkdir -p (dirname ~/$path)
     cmd rm -rf ~/$path
     cmd ln -s $dir/$path ~/$path
 

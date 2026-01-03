@@ -1,0 +1,15 @@
+
+brew "fd"
+brew "fish"
+brew "git"
+brew "ripgrep"
+brew "sd"
+brew "vim"
+
+cask "android-platform-tools"
+cask "bluesnooze"
+cask "orbstack"
+cask "rectangle"
+cask "sourcetree"
+cask "the-unarchiver"
+cask "visual-studio-code"

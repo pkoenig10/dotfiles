@@ -13,23 +13,10 @@ function cmd
     $argv
 end
 
-function brew_install
+function brew_bundle
     echo "Installing Homebrew packages"
 
-    cmd brew install -q \
-        android-platform-tools \
-        bluesnooze \
-        fd \
-        fish \
-        git \
-        orbstack \
-        rectangle \
-        ripgrep \
-        sd \
-        sourcetree \
-        the-unarchiver \
-        vim \
-        visual-studio-code
+    cmd brew bundle --verbose
 
     echo
 end
@@ -45,7 +32,7 @@ function link -a path
 end
 
 if command -q brew
-    brew_install
+    brew_bundle
 end
 
 link .config/fish/config.fish

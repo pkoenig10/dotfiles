@@ -7,7 +7,7 @@ brew "node"
 brew "protobuf"
 brew "python3"
 brew "ripgrep"
-brew "rustup", link: true
+brew "rustup", link: true, postinstall: "${HOMEBREW_PREFIX}/bin/rustup default stable"
 brew "sd"
 brew "speedtest-cli"
 brew "sqlite3", link: true
@@ -24,3 +24,9 @@ cask "rectangle"
 cask "sourcetree"
 cask "the-unarchiver"
 cask "visual-studio-code"
+
+cargo "cargo-component"
+cargo "cargo-expand"
+cargo "cargo-llvm-lines"
+cargo "cargo-show-asm"
+cargo "flamegraph"

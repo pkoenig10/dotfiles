@@ -1,9 +1,21 @@
+brew "binaryen"
 brew "fd"
 brew "fish"
 brew "git"
+brew "go"
+brew "iperf3"
+brew "node"
+brew "protobuf"
+brew "python3"
 brew "ripgrep"
+brew "rustup", link: true
 brew "sd"
+brew "speedtest-cli"
+brew "sqlite3", link: true
 brew "vim"
+brew "wabt"
+brew "wasm-bindgen"
+brew "wasm-tools"
 
 cask "android-platform-tools"
 cask "bluesnooze"

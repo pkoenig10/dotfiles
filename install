@@ -40,5 +40,5 @@ link .config/fish/functions
 link .gitconfig
 link .ssh/authorized_keys
 link .ssh/config
-link .vim
+link .vim/pack
 link .vimrc

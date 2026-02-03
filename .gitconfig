@@ -16,6 +16,8 @@
     default = upstream
 [rebase]
     autoStash = true
+[submodule]
+    recurse = true
 [tag]
     gpgsign = true
 [user]

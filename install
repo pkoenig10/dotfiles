@@ -1,9 +1,5 @@
 #!/usr/bin/env fish
 
-git submodule update --init --recursive
-
-set dir (realpath (status dirname))
-
 function cmd
     set -l color_gray (set_color brblack)
     set -l color_normal (set_color normal)
@@ -13,10 +9,18 @@ function cmd
     $argv
 end
 
-function brew_bundle
+function brew_bundle -a upgrade -a verbose
     echo "Installing Homebrew packages"
 
-    cmd brew bundle --verbose
+    set -l options
+    if test -z $upgrade
+        set -a options --no-upgrade
+    end
+    if test -n $verbose
+        set -a options --verbose
+    end
+
+    cmd brew bundle $options
 
     echo
 end
@@ -31,8 +35,14 @@ function link -a path
     echo
 end
 
+argparse u/upgrade v/verbose -- $argv
+
+git submodule update --init --recursive
+
+set dir (realpath (status dirname))
+
 if command -q brew
-    brew_bundle
+    brew_bundle "$_flag_upgrade" "$_flag_verbose"
 end
 
 link .config/fish/config.fish

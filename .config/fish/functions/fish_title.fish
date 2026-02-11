@@ -2,7 +2,7 @@ function fish_title
     set -l host
     set -l title
 
-    if set -q SSH_TTY
+    if set -q SSH_CONNECTION
         set host (prompt_hostname)
     end
 

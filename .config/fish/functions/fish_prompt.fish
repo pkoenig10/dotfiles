@@ -1,24 +1,24 @@
 function fish_prompt
     set -l color_normal (set_color normal)
-    set -l color_lvl (set_color red)
+    set -l color_nix (set_color red)
     set -l color_host (set_color green)
     set -l color_name (set_color blue)
     set -l color_ref (set_color cyan)
     set -l color_operation (set_color magenta)
     set -l color_cwd (set_color yellow)
 
-    set -l lvl
+    set -l nix
     set -l host
     set -l name
     set -l ref
     set -l operation
     set -l cwd
 
-    if test $SHLVL -gt 1 2>/dev/null
-        set lvl (math $SHLVL - 1)
+    if string match -q '/nix/store/*' $PATH
+        set nix '*'
     end
 
-    if set -q SSH_TTY
+    if set -q SSH_CONNECTION
         set host (prompt_hostname)
     end
 
@@ -67,5 +67,5 @@ function fish_prompt
         set name (prompt_pwd -d 0)
     end
 
-    echo -n -s $color_lvl '['$lvl'] ' $color_normal $color_host $host' ' $color_normal $color_name $name $color_normal $color_ref ' '$ref $color_normal $color_operation ' '$operation $color_normal $color_cwd ' '$cwd $color_normal "\$ "
+    echo -n -s $color_nix $nix' ' $color_normal $color_host $host' ' $color_normal $color_name $name $color_normal $color_ref ' '$ref $color_normal $color_operation ' '$operation $color_normal $color_cwd ' '$cwd $color_normal "\$ "
 end

@@ -1,5 +1,6 @@
 brew "binaryen"
 brew "caddy"
+brew "delve"
 brew "fd"
 brew "fish"
 brew "git"

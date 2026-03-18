@@ -1,3 +1,5 @@
+[branch]
+    sort = -committerdate
 [commit]
     gpgsign = true
 [core]
